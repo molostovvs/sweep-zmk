@@ -52,14 +52,14 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │  9       │  8       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │          │
-            &trans    &trans     &kp N9     &kp N8     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
+        //│          │          │   9      │    8     │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │          │
+            &trans     &trans     &kp N9      &kp N8     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    3     │  2       │  1       │  0       │          │   │ LEFT     │ UP       │ DOWN     │ RIGHT    │          │
-            &kp N3    &kp N2     &kp N1     &kp N0      &trans         &kp LEFT   &kp UP   &kp DOWN   &kp RIGHT   &trans
+        //│    3     │    2     │   1      │    0     │          │   │ LEFT     │ UP       │ DOWN     │ RIGHT    │          │
+             &kp N3     &kp N2    &kp N1      &kp N0     &trans         &kp LEFT   &kp UP   &kp DOWN   &kp RIGHT   &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    7     │    6     │   5      │    4     │          │   │          │  CAPS    │          │          │ PRNTSCRN │
-           &kp N7     &kp N6     &kp N5     &kp N4      &trans         &trans     &caps_word     &trans     &trans  &kp PSCRN
+             &kp N7     &kp N6     &kp N5     &kp N4     &trans         &trans     &caps_word     &trans     &trans  &kp PSCRN
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &kp ESC        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -69,14 +69,14 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //│          │          │          │          │          │   │    (     │    )     │    +=    │    -_    │          │
+            &trans     &trans   &trans        &trans     &trans        &kp LPAR   &kp RPAR   &kp EQUAL  &kp MINUS    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans     &trans     &trans   &trans       &trans          &kp LEFT   &kp UP    &kp DOWN   &kp RIGHT   &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+        //│          │          │          │          │          │   │    {     │    }     │    [     │    ]     │          │
+            &trans     &trans     &trans     &trans     &trans         &kp LBRC   &kp RBRC   &kp LBKT   &kp RBKT    &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -93,7 +93,7 @@
           &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &bt BT_CLR_ALL    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+            &trans     &trans   &bt BT_CLR_ALL &bt BT_CLR &bt BT_SEL 2  &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
