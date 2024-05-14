@@ -10,17 +10,28 @@
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
+#define AS(keycode) &as LS(keycode) keycode
+
 / {
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+            };
     };
 
     conditional_layers {
@@ -53,14 +64,14 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │    (     │    )     │    =+    │          │
-         &kp KP_DIVIDE &kp KP_MULTIPLY &kp N9 &kp N8   &kp KP_PLUS      &none     &kp LPAR   &kp RPAR   &kp RBKT    &none 
+        //│          │          │          │          │          │   │          │    (     │    )     │    =+    │   /?     │
+         &kp KP_DIVIDE &kp KP_MULTIPLY AS(N9) AS(N8)   &kp KP_PLUS      &none     &kp LPAR   &kp RPAR   AS(RBKT)   AS(LBKT) 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-             &kp N3     &kp N2     &kp N1     &kp N0  &kp KP_MINUS     &kp LEFT   &kp UP     &kp DOWN   &kp RIGHT   &none 
+        //│          │          │          │          │          │   │          │          │          │          │    -_    │
+             AS(N3)     AS(N2)     AS(N1)     AS(N0)  &kp KP_MINUS     &kp LEFT   &kp UP     &kp DOWN   &kp RIGHT  AS(APOS) 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │    {[    │    ]}    │          │          │
-             &kp N7     &kp N6     &kp N5     &kp N4   &kp KP_DOT       &none     &kp MINUS  &kp EQUAL   &none      &none 
+        //│          │          │          │          │          │   │          │    {[    │    ]}    │          │    \|    │
+             AS(N7)     AS(N6)     AS(N5)     AS(N4)   &kp KP_DOT       &none     AS(MINUS)  AS(EQUAL)   &none     AS(NUHS) 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &sk LSHIFT   &trans         &trans     &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -71,10 +82,10 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │   VOL+   │   │   NEXT   │          │          │          │          │
-             &none      &none      &none      &none   &kp C_VOL_UP    &kp C_NEXT   &none      &none      &none      &none 
+             &kp ESC    &none      &none      &none   &kp C_VOL_UP    &kp C_NEXT   &none      &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │   VOL-   │   │   PREV   │L+R SHIFT │          │          │          │
-             &none      &none      &none      &none   &kp C_VOL_DN   &kp C_PREV &kp LS(RSHFT) &none      &none      &none 
+            &kp GRAVE   &none      &none      &none   &kp C_VOL_DN   &kp C_PREV &kp LS(RSHFT) &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │PLAY/PAUSE│   │PLAY/PAUSE│   CAPS   │          │          │ PRNTSCRN │
              &none      &none      &none      &none     &kp C_PP       &kp C_PP  &caps_word   &none      &none     &kp PSCRN
