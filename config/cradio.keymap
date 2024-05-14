@@ -62,7 +62,7 @@
         //│          │          │          │          │          │   │          │    {[    │    ]}    │          │          │
              &kp N7     &kp N6     &kp N5     &kp N4   &kp KP_DOT       &none     &kp MINUS  &kp EQUAL   &none      &none 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &sk LSHIFT   &none          &none      &none 
+                                            &sk LSHIFT   &trans         &trans     &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -79,7 +79,7 @@
         //│          │          │          │          │PLAY/PAUSE│   │PLAY/PAUSE│   CAPS   │          │          │ PRNTSCRN │
              &none      &none      &none      &none     &kp C_PP       &kp C_PP  &caps_word   &none      &none     &kp PSCRN
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &none     &kp ESC         &none      &none 
+                                              &none     &kp ESC         &trans     &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
