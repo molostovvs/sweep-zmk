@@ -56,7 +56,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp SPACE   &lt 1 TAB     &lt 2 ENTER  &kp BSPC
+                                            &kp SPACE     &mo 1          &mo 2    &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -65,15 +65,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │    (     │    )     │    =+    │   /?     │
-         &kp KP_DIVIDE &kp KP_MULTIPLY AS(N9) AS(N8)   &kp KP_PLUS      &none     &kp LPAR   &kp RPAR   AS(RBKT)   AS(LBKT) 
+         &kp KP_DIVIDE &kp KP_MULTIPLY &kp N9 &kp N8   &kp KP_PLUS     &kp PG_UP  &kp LPAR   &kp RPAR   &kp RBKT   &kp LBKT 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │    -_    │
-             AS(N3)     AS(N2)     AS(N1)     AS(N0)  &kp KP_MINUS     &kp LEFT   &kp UP     &kp DOWN   &kp RIGHT  AS(APOS) 
+             &kp N3     &kp N2     &kp N1     &kp N0  &kp KP_MINUS     &kp LEFT    &kp UP    &kp DOWN   &kp RIGHT  &kp APOS 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │    {[    │    ]}    │          │    \|    │
-             AS(N7)     AS(N6)     AS(N5)     AS(N4)   &kp KP_DOT       &none     AS(MINUS)  AS(EQUAL)   &none     AS(NUHS) 
+        //│          │          │          │          │   (dot)  │   │          │    {[    │    ]}    │          │    \|    │
+             &kp N7     &kp N6     &kp N5     &kp N4     &kp E        &kp PG_DN   &kp MINUS  &kp EQUAL    &none    &kp NUHS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &sk LSHIFT   &trans         &trans     &none 
+                                               &none     &trans         &trans   &sk LSHIFT 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -82,13 +82,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │   VOL+   │   │   NEXT   │          │          │          │          │
-             &kp ESC    &none      &none      &none   &kp C_VOL_UP    &kp C_NEXT   &none      &none      &none      &none 
+             &none      &none      &none      &none   &kp C_VOL_UP    &kp C_NEXT &kp LS(RSHFT) &none     &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │   VOL-   │   │   PREV   │L+R SHIFT │          │          │          │
-            &kp GRAVE   &none      &none      &none   &kp C_VOL_DN   &kp C_PREV &kp LS(RSHFT) &none      &none      &none 
+        //│          │          │          │          │   VOL-   │   │   PREV   │          │          │          │          │
+            &kp GRAVE   &none      &none      &none   &kp C_VOL_DN   &kp C_PREV   &kp ENTER   &kp DEL    &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │PLAY/PAUSE│   │PLAY/PAUSE│   CAPS   │          │          │ PRNTSCRN │
-             &none      &none      &none      &none     &kp C_PP       &kp C_PP  &caps_word   &none      &none     &kp PSCRN
+        //│          │          │          │          │PLAY/PAUSE│   │PLAY/PAUSE│          │          │          │ PRNTSCRN │
+             &none      &none      &none      &none     &kp C_PP       &kp C_PP   &kp TAB   &caps_word   &none     &kp PSCRN
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none     &kp ESC         &trans     &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
