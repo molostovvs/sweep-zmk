@@ -8,7 +8,7 @@
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LALT k1  &ht LGUI k2  &ht LCTRL k3  &ht LSHIFT k4
-#define HRMR(k1,k2,k3,k4) &ht RSHIFT k1  &ht RCTRL k2  &ht RGUI k3  &ht RALT k4
+#define HRMR(k1,k2,k3,k4) &ht RSHIFT k1  &ht LCTRL k2  &ht RGUI k3  &ht LALT k4
 
 #define AS(keycode) &as LS(keycode) keycode
 
