@@ -12,6 +12,11 @@
 
 #define AS(keycode) &as LS(keycode) keycode
 
+&caps_word {
+    /delete-property/ ignore-modifiers;
+    continue-list = <COMMA DOT SEMI FSLH UNDERSCORE BACKSPACE DELETE>;
+};
+
 / {
     behaviors {
         ht: hold_tap {
@@ -32,6 +37,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             };
+
     };
 
     combos {
@@ -41,11 +47,6 @@
             key-positions = <0 9>;
             bindings = <&kp ESC>;
         };
-        // combo_enter {
-        //     timeout-ms = <50>;
-        //     key-positions = <14 15>;
-        //     bindings = <&kp ENTER>;
-        // };
     };
 
     conditional_layers {
