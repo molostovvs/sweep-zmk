@@ -40,14 +40,14 @@
 
     };
 
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <60>;
-            key-positions = <0 9>;
-            bindings = <&kp ESC>;
-        };
-    };
+    // combos {
+    //     compatible = "zmk,combos";
+    //     combo_esc {
+    //         timeout-ms = <60>;
+    //         key-positions = <0 9>;
+    //         bindings = <&kp ESC>;
+    //     };
+    // };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
