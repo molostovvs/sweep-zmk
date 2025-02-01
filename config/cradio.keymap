@@ -38,10 +38,11 @@
         caps_word: caps_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
-            continue-list = <R T Y U I O P A S D F G H J K L SEMI X C V B M COMMA DOT SLASH>;
-            ignore-alphas;
-            ignore-numbers;
-            ignore-modifiers;
+            // continue-list = <R T Y U I O P A S D F G H J K L SEMI X C V B M COMMA DOT SLASH>;
+            continue-list = <A O E U>;
+            // ignore-alphas;
+            // ignore-numbers;
+            // ignore-modifiers;
             };
     };
 
@@ -130,7 +131,7 @@
             &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)      &kp LS(Y)  &kp LS(U)  &kp LS(I)  &kp LS(O)  &kp LS(P)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-            &kp LS(A)  &kp LS(O)  &kp LS(E)  &kp LS(U)  &kp LS(G)      &kp LS(H)  &kp LS(J)  &kp LS(K)  &kp LS(L)  &kp LS(SEMI)  
+            &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)      &kp LS(H)  &kp LS(J)  &kp LS(K)  &kp LS(L)  &kp LS(SEMI)  
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)      &kp LS(N)  &kp LS(M)  &kp LS(COMMA) &kp LS(DOT) &kp LS(FSLH)
