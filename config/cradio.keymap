@@ -39,10 +39,10 @@
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
             // continue-list = <R T Y U I O P A S D F G H J K L SEMI X C V B M COMMA DOT SLASH>;
-            continue-list = <A O E U>;
+            continue-list = <A S D E F>;
             // ignore-alphas;
-            // ignore-numbers;
-            // ignore-modifiers;
+            ignore-numbers;
+            ignore-modifiers;
             };
     };
 
