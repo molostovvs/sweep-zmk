@@ -35,7 +35,7 @@
             bindings = <&kp>, <&kp>;
             };
 
-        cw: caps_wold {
+        caps_word: caps_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
             continue-list = <R T Y U I O P A S D F G H J K L SEMI X C V B M COMMA DOT SLASH>;
@@ -99,7 +99,7 @@
             &kp GRAVE   &none      &none     &kp ESC  &kp C_VOL_DN   &kp C_PREV   &kp ENTER   &kp DEL    &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │PLAY/PAUSE│   │PLAY/PAUSE│          │CAPS_WORD │          │ PRNTSCRN │
-             &none      &none      &none      &none     &kp C_PP       &kp C_PP   &kp TAB      &cw       &none     &kp PSCRN
+             &none      &none      &none      &none     &kp C_PP       &kp C_PP   &kp TAB   &caps_word 0 &none     &kp PSCRN
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none      &trans         &trans     &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
