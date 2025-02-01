@@ -5,17 +5,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <behaviors/num_word.dtsi>
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LALT k1  &ht LGUI k2  &ht LCTRL k3  &ht LSHIFT k4
 #define HRMR(k1,k2,k3,k4) &ht RSHIFT k1  &ht LCTRL k2  &ht RGUI k3  &ht LALT k4
 
 #define AS(keycode) &as LS(keycode) keycode
-
-&caps_word {
-    /delete-property/ ignore-modifiers;
-    continue-list = <COMMA DOT SEMI FSLH UNDERSCORE BACKSPACE DELETE>;
-};
 
 / {
     behaviors {
@@ -39,6 +35,14 @@
             bindings = <&kp>, <&kp>;
             };
 
+        cw: caps_wold {
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <1>;
+            continue-list = <R T Y U I O P A S D F G H J K L SEMI X C V B M COMMA DOT SLASH>;
+            ignore-alphas;
+            ignore-numbers;
+            ignore-modifiers;
+            };
     };
 
     conditional_layers {
@@ -94,8 +98,8 @@
         //│          │          │          │          │   VOL-   │   │   PREV   │          │          │          │          │
             &kp GRAVE   &none      &none     &kp ESC  &kp C_VOL_DN   &kp C_PREV   &kp ENTER   &kp DEL    &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │PLAY/PAUSE│   │PLAY/PAUSE│          │          │          │ PRNTSCRN │
-             &none      &none      &none      &none     &kp C_PP       &kp C_PP   &kp TAB   &caps_word   &none     &kp PSCRN
+        //│          │          │          │          │PLAY/PAUSE│   │PLAY/PAUSE│          │CAPS_WORD │          │ PRNTSCRN │
+             &none      &none      &none      &none     &kp C_PP       &kp C_PP   &kp TAB      &cw       &none     &kp PSCRN
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none      &trans         &trans     &none 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
