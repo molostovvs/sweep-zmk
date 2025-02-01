@@ -38,9 +38,7 @@
         caps_word: caps_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
-            // continue-list = <R T Y U I O P A S D F G H J K L SEMI X C V B M COMMA DOT SLASH>;
-            continue-list = <A S D E F>;
-            // ignore-alphas;
+            continue-list = <Q W E R T Y U I O P A S D F G H J K L SEMI Z X C V B N M COMMA DOT SLASH BSPC DEL>;
             ignore-numbers;
             ignore-modifiers;
             };
