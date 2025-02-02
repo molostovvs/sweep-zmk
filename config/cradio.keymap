@@ -8,31 +8,20 @@
 #include <behaviors/num_word.dtsi>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &pht_l LALT k1  &pht_l LGUI k2  &pht_l LCTRL k3  &pht_l LSHIFT k4
-#define HRMR(k1,k2,k3,k4) &pht_r RSHIFT k1  &pht_r LCTRL k2  &pht_r RGUI k3  &pht_r LALT k4
+#define HRML(k1,k2,k3,k4) &ht LALT k1  &ht LGUI k2  &ht LCTRL k3  &ht LSHIFT k4
+#define HRMR(k1,k2,k3,k4) &ht RSHIFT k1  &ht LCTRL k2  &ht RGUI k3  &ht LALT k4
 
 #define AS(keycode) &as LS(keycode) keycode
 
 / {
     behaviors {
-        pht_l: positional_hold_tap_left {
+        ht: positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <170>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <100>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <16 17 18 19>;
-        };
-
-        pht_r: positional_hold_tap_right {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <170>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <10 11 12 13>;
         };
 
         as: auto_shift {
