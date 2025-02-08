@@ -50,6 +50,11 @@ ZMK_HOLD_TAP(hmr,
             bindings = <&kp>, <&kp>;
         };
 
+        &sk {
+            release-after-ms = <800>;
+            quick-release;
+        };
+
         sk_layer: sticky_shift_layer {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
