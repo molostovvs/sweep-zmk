@@ -117,7 +117,7 @@ ZMK_HOLD_TAP(hmr,
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)      &kp LS(N)  &kp LS(M)  &kp LS(COMMA) &kp LS(DOT) &kp LS(FSLH)
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp SPACE   &mo2           &mo 3     &kp BSPC
+                                            &kp SPACE   &mo 2           &mo 3     &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
