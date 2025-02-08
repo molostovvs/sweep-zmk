@@ -100,7 +100,7 @@ ZMK_HOLD_TAP(hmr,
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPACE  &sk_layer &sk LSHIFT &mo 2          &mo 3      &kp BSPC
+                                             &kp SPACE  &sk_layer &sk LSHIFT &mo 2  &mo 3      &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -117,7 +117,7 @@ ZMK_HOLD_TAP(hmr,
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)      &kp LS(N)  &kp LS(M)  &kp LS(COMMA) &kp LS(DOT) &kp LS(FSLH)
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp SPACE   &sk_shift_layer &mo 3     &kp BSPC
+                                            &kp SPACE   &mo2           &mo 3     &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
