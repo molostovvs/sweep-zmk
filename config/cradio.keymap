@@ -58,7 +58,7 @@ ZMK_HOLD_TAP(hmr,
         sk_layer: sticky_shift_layer {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <125>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&sk>;
         };
