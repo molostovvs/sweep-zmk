@@ -21,7 +21,7 @@
 
 ZMK_HOLD_TAP(hml,
     flavor = "balanced";
-    tapping-term-ms = <230>;
+    tapping-term-ms = <210>;
     quick-tap-ms = <175>;
     require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
@@ -31,7 +31,7 @@ ZMK_HOLD_TAP(hml,
 
 ZMK_HOLD_TAP(hmr,
     flavor = "balanced";
-    tapping-term-ms = <230>;
+    tapping-term-ms = <210>;
     quick-tap-ms = <175>;
     require-prior-idle-ms = <150>;
     bindings = <&kp>, <&kp>;
@@ -58,7 +58,7 @@ ZMK_HOLD_TAP(hmr,
         sk_layer: sticky_shift_layer {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <110>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&sk>;
         };
