@@ -41,12 +41,13 @@ ZMK_HOLD_TAP(hmr,
     hold-trigger-on-release;
 )
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_nvim_accept { timeout-ms = <50>; key-positions = <6 7>; bindings = <&kp LC(Y)>; };
-    };
-};
+// / {
+//     combos {
+//         compatible = "zmk,combos";
+// 									// T (qwerty) = Y (dvorak)
+//         combo_nvim_accept { timeout-ms = <50>; key-positions = <6 7>; bindings = <&kp LC(T)>; };
+//     };
+// };
 
 &sk {
     release-after-ms = <800>;
@@ -149,7 +150,7 @@ ZMK_HOLD_TAP(hmr,
              &none      &none      &none      &none   &kp C_VOL_UP    &kp C_NEXT  LANG_SW     &none      &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │   VOL-   │   │   PREV   │          │          │          │          │
-            &kp GRAVE   &none      &none     &kp ESC  &kp C_VOL_DN   &kp C_PREV   &kp ENTER   &kp DEL    &none      &none 
+            &kp GRAVE   &none    &kp LC(T)   &kp ESC  &kp C_VOL_DN   &kp C_PREV   &kp ENTER   &kp DEL    &none      &none 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │PLAY/PAUSE│   │PLAY/PAUSE│          │CAPS_WORD │          │ PRNTSCRN │
              &none      &none      &none      &none     &kp C_PP       &kp C_PP   &kp TAB   &caps_word 1 &none     &kp PSCRN
